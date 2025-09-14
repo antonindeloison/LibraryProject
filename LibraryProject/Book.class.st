@@ -30,6 +30,11 @@ Book >> initialize [
 ]
 
 { #category : 'accessing' }
+Book >> testInitializeIsOk [
+	self assert: Die new faces equals: 6
+]
+
+{ #category : 'accessing' }
 Book >> title [
 
 	^ title

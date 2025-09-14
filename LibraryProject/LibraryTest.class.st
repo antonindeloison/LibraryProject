@@ -50,6 +50,11 @@ LibraryTest >> testAddMember [
 	self assert: (lib members size) = 1.
 ]
 
+{ #category : 'tests' }
+LibraryTest >> testCreationIsOk [
+	self assert: (Die withFaces: 20) faces equals: 20
+]
+
 { #category : 'running' }
 LibraryTest >> testFindBook [
 
