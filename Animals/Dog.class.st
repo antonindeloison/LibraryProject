@@ -8,5 +8,5 @@ Class {
 { #category : 'as yet unclassified' }
 Dog >> parler [
 	
-	^ 'Woof.'
+	^ 'Je suis ' , self nom , ' et je fais Woof.'.
 ]

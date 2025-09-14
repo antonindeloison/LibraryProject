@@ -1,12 +1,12 @@
 Class {
-	#name : 'Horse',
+	#name : 'Cat',
 	#superclass : 'Animal',
 	#category : 'Animals',
 	#package : 'Animals'
 }
 
 { #category : 'as yet unclassified' }
-Horse >> parler [
+Cat >> parler [
 
-	^ 'Je mappelle ' , self nom ,  ' et je heni.'
+	^ super parler , ' et je dis Miaou !'.
 ]
