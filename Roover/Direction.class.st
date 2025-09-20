@@ -18,3 +18,11 @@ Direction >> = arg [
 		
 	^self class name = arg class name 
 ]
+
+{ #category : 'testing' }
+Direction >> canMove: newPoint within: gridSize [
+
+	((newPoint x > gridSize x) or: [newPoint y > gridSize y])
+		ifTrue: [ ^ false ].
+	^ true
+]

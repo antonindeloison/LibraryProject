@@ -89,7 +89,7 @@ Roover >> interpretInit: aString [
 { #category : 'accessing' }
 Roover >> move [
 	| p |
-	p:= self direction move: x@y.
+	p:= self direction move: x@y within: gridSize.
 	x:= p x.
 	y:= p y.
 	

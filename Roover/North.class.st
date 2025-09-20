@@ -6,9 +6,12 @@ Class {
 }
 
 { #category : 'accessing' }
-North >> move: aPoint [
+North >> move: aPoint within: gridSize [
 
-	^ aPoint x @ (aPoint y + 1)
+	(super canMove: aPoint within: gridSize)
+		ifTrue: [ ^ aPoint x @ (aPoint y + 1) ]
+		ifFalse: [ ^ aPoint ]
+
 ]
 
 { #category : 'as yet unclassified' }

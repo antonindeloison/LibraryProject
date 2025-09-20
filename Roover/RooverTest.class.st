@@ -65,6 +65,7 @@ RooverTest >> testInterpretDirection [
 
 	| r |
 	r := Roover new.
+	r gridSize: 3@3.
 	r interpretDirection: 'MMRMM'.
 
 	self assert: r x equals: 3.
@@ -76,6 +77,7 @@ RooverTest >> testInterpretDirection [
 RooverTest >> testMove [
 | r |
 r:= Roover new.
+r gridSize: 3@3.
 r move.
 self assert: r x equals: 1
 

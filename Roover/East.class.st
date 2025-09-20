@@ -6,8 +6,12 @@ Class {
 }
 
 { #category : 'accessing' }
-East >> move: aPoint [ 
-	^ aPoint x+1 @ aPoint y
+East >> move: aPoint within: gridSize [
+
+	(super canMove: aPoint within: gridSize )
+		ifTrue: [ ^ aPoint x+1 @ aPoint y]
+		ifFalse: [ ^ aPoint]
+
 ]
 
 { #category : 'comparing' }
