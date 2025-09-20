@@ -45,8 +45,8 @@ Roover >> interpretCommand: aString [
 	| input grid |
 	input := aString splitOn: Character cr.
 	grid := input first splitOn: Character space.
-	self gridSize: (grid first asInteger + 1) @
-	(grid second asInteger + 1).
+	self gridSize: grid first asInteger @
+	grid second asInteger.
 	
 		
 	

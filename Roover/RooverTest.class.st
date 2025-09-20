@@ -44,7 +44,7 @@ RooverTest >> testGridSize [
 	r interpretCommand: '5 5
 1 2 N 
 LMLM'.
-	self assert: r gridSize equals: 6@6
+	self assert: r gridSize equals: 5@5
 ]
 
 { #category : 'tests' }
