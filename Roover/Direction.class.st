@@ -22,7 +22,6 @@ Direction >> = arg [
 { #category : 'testing' }
 Direction >> canMove: newPoint within: gridSize [
 
-	((newPoint x > gridSize x) or: [newPoint y > gridSize y])
-		ifTrue: [ ^ false ].
-	^ true
+	^ (newPoint x between: 1 and: gridSize x) and: [
+		  newPoint y between: 1 and: gridSize y ]
 ]

@@ -8,10 +8,11 @@ Class {
 { #category : 'accessing' }
 North >> move: aPoint within: gridSize [
 
-	(super canMove: aPoint within: gridSize)
-		ifTrue: [ ^ aPoint x @ (aPoint y + 1) ]
+	| newPoint |
+	newPoint := aPoint x @ (aPoint y + 1).
+	(super canMove: newPoint within: gridSize)
+		ifTrue: [ ^ newPoint ]
 		ifFalse: [ ^ aPoint ]
-
 ]
 
 { #category : 'accessing' }

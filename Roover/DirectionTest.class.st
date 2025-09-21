@@ -13,7 +13,8 @@ DirectionTest >> testCanMove [
 
 { #category : 'moveTest' }
 DirectionTest >> testEastMove [
-	self assert: (East new move: 0@0 within: 3@3) equals: 1@0.
+
+	self assert: (East new move: 3 @ 0 within: 3 @ 3) equals: 3 @ 0
 ]
 
 { #category : 'tests' }
@@ -36,7 +37,8 @@ DirectionTest >> testEastTurnRight [
 
 { #category : 'moveTest' }
 DirectionTest >> testNorthMove [
-	self assert: (North new move: 0@0 within: 3@3) equals: 0@1.
+
+	self assert: (North new move: 1 @ 2 within: 3 @ 3) equals: 1 @ 3
 ]
 
 { #category : 'tests' }
@@ -60,7 +62,7 @@ DirectionTest >> testNorthTurnRight [
 { #category : 'moveTest' }
 DirectionTest >> testSouthMove [
 
-	self assert: (South new move: 0 @ 0 within: 3@3) equals: 0 @ -1
+	self assert: (South new move: 1 @ 1 within: 3 @ 3) equals: 1 @ 1
 ]
 
 { #category : 'tests' }
@@ -95,7 +97,7 @@ DirectionTest >> testTurnRight [
 { #category : 'moveTest' }
 DirectionTest >> testWestMove [
 
-	self assert: (West new move: 0 @ 0 within: 3@3) equals: -1 @ 0
+	self assert: (West new move: 1 @ 1 within: 3 @ 3) equals: 1 @ 1
 ]
 
 { #category : 'tests' }
