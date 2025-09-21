@@ -17,6 +17,12 @@ DirectionTest >> testEastMove [
 ]
 
 { #category : 'tests' }
+DirectionTest >> testEastMoveBack [
+
+	self assert: (East new moveBack: 2 @ 1 within: 3 @ 3) equals: 1 @ 1
+]
+
+{ #category : 'tests' }
 DirectionTest >> testEastTurnLeft [
 
 	self assert: East new rotateLeft equals: North new
@@ -31,6 +37,12 @@ DirectionTest >> testEastTurnRight [
 { #category : 'moveTest' }
 DirectionTest >> testNorthMove [
 	self assert: (North new move: 0@0 within: 3@3) equals: 0@1.
+]
+
+{ #category : 'tests' }
+DirectionTest >> testNorthMoveBack [
+
+	self assert: (North new moveBack: 1 @ 2 within: 3@3) equals: 1 @ 1
 ]
 
 { #category : 'tests' }
@@ -49,6 +61,12 @@ DirectionTest >> testNorthTurnRight [
 DirectionTest >> testSouthMove [
 
 	self assert: (South new move: 0 @ 0 within: 3@3) equals: 0 @ -1
+]
+
+{ #category : 'tests' }
+DirectionTest >> testSouthMoveBack [
+
+	self assert: (South new moveBack: 1 @ 2 within: 3 @ 3) equals: 1 @ 3
 ]
 
 { #category : 'tests' }
@@ -78,6 +96,12 @@ DirectionTest >> testTurnRight [
 DirectionTest >> testWestMove [
 
 	self assert: (West new move: 0 @ 0 within: 3@3) equals: -1 @ 0
+]
+
+{ #category : 'tests' }
+DirectionTest >> testWestMoveBack [
+
+	self assert: (West new moveBack: 2 @ 1 within: 3 @ 3) equals: 3 @ 1
 ]
 
 { #category : 'tests' }

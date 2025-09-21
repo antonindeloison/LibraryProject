@@ -14,6 +14,16 @@ West >> move: aPoint within: gridSize [
 	
 ]
 
+{ #category : 'accessing' }
+West >> moveBack: aPoint within: gridSize [
+
+	| newPoint |
+	newPoint := (aPoint x + 1) @ (aPoint y).
+	(super canMove: newPoint within: gridSize)
+		ifTrue: [ ^ newPoint ]
+		ifFalse: [ ^ aPoint ]
+]
+
 { #category : 'comparing' }
 West >> rotateLeft [
 	^ South new.

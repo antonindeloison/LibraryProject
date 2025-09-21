@@ -65,10 +65,10 @@ RooverTest >> testInterpretDirection [
 
 	| r |
 	r := Roover new.
-	r gridSize: 3@3.
-	r interpretDirection: 'MMRMM'.
+	r gridSize: 3 @ 3.
+	r interpretDirection: 'MMRMMB'.
 
-	self assert: r x equals: 3.
+	self assert: r x equals: 2.
 	self assert: r y equals: 3.
 	self assert: r direction equals: East new
 ]

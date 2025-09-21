@@ -55,14 +55,16 @@ Roover >> interpretCommand: aString [
 { #category : 'accessing' }
 Roover >> interpretDirection: aString [
 
-	
 	aString do: [ :c |
 			c = $R
 				ifTrue: [ self turnRight ]
 				ifFalse: [
 						c = $L
 							ifTrue: [ self turnLeft ]
-							ifFalse: [ self move ] ] ]
+							ifFalse: [
+									c = $B
+										ifTrue: [ self moveBack ]
+										ifFalse: [ self move ] ] ] ]
 ]
 
 { #category : 'accessing' }
@@ -93,6 +95,15 @@ Roover >> move [
 	x:= p x.
 	y:= p y.
 	
+]
+
+{ #category : 'accessing' }
+Roover >> moveBack [
+
+	| p |
+	p := self direction moveBack: x @ y within: gridSize.
+	x := p x.
+	y := p y
 ]
 
 { #category : 'as yet unclassified' }

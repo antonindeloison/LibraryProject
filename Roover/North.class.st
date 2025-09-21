@@ -14,6 +14,16 @@ North >> move: aPoint within: gridSize [
 
 ]
 
+{ #category : 'accessing' }
+North >> moveBack: aPoint within: gridSize [
+    | newPoint |
+    newPoint := aPoint x @ (aPoint y - 1).
+    (super canMove: newPoint within: gridSize)
+        ifTrue: [ ^ newPoint ]
+        ifFalse: [ ^ aPoint ].
+
+]
+
 { #category : 'as yet unclassified' }
 North >> rotateLeft [
 	^ West new
